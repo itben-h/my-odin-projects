@@ -1,2 +1,2 @@
 # the-odin-project
-Personal projects done under The Odin Project
+Recipe webpages done under The Odin Project
