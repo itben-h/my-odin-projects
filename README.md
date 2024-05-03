@@ -1,6 +1,6 @@
 Personal work done under [**The Odin Project**](https://www.theodinproject.com/). Lots to do.
 
-##Foundation##
+## Foundation
 
 | Project | Topic(s) | Repository | Preview |
 | --- | --- | --- | --- |
