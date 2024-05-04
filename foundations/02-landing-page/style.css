@@ -34,6 +34,11 @@ body {
     gap: 1em;
 }
 
+.intro {
+    background-color: var(--primary);
+    padding: 3em 6em;
+}
+
 ul {
     list-style-type: none;
 }
