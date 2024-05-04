@@ -1,0 +1,44 @@
+:root {
+    --primary: rgb(54, 82, 117);
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.5em;
+    color: white;
+}
+
+.header-links {
+    display: flex;
+    gap: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(214, 214, 214);
+}
