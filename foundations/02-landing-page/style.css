@@ -1,6 +1,7 @@
 :root {
     --primary: rgb(54, 82, 117);
     --highlight: rgb(54, 186, 226);
+    --offwhite: rgb(219, 219, 219);
 }
 
 body {
@@ -13,6 +14,14 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+.title {
+    font-size: 1.5em;
+}
+
+.white {
+    color: white;
 }
 
 #header {
@@ -31,25 +40,50 @@ body {
     padding: 0 2em;
 }
 
-.title {
-    font-size: 1.5em;
-    color: white;
-}
-
 .header-links {
     display: flex;
-    gap: 1em;
+    gap: 3vw;
 }
 
 .intro {
     background-color: var(--primary);
-    padding: 3em 6em;
+    padding: 2em 6em;
+    padding-top: 5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10em;
+}
+
+.intro-text {
+    max-width: 25em;
+    color: white;
+}
+
+.intro-text p {
+    color: var(--offwhite);
+}
+
+.intro img {
+    border-radius: 0.5em;
+}
+
+.intro-caption {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.2em;
+}
+
+.body .title {
+    text-align: center;
+    padding: 2em;
 }
 
 .container {
     display: flex;
     flex: 1;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 1em;
 }
 
@@ -66,9 +100,23 @@ body {
 }
 
 .icon-set p{
-    max-width: 10vw;
+    max-width: 10em;
     font-size: 0.9em;
     color: rgb(59, 59, 59);
+}
+
+.quote {
+    background-color: rgb(233, 233, 233);
+    margin-top: 3em;
+    padding: 3em 20em;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.bold.name {
+    font-style: normal;
+    font-size: 0.7em;
+    text-align: right;
 }
 
 #footer {
@@ -81,5 +129,15 @@ ul {
 
 a {
     text-decoration: none;
-    color: rgb(214, 214, 214);
+    color: var(--offwhite);
+}
+
+.sign-up {
+    font-weight: bold;
+    color: white;
+    background-color: var(--highlight);
+    padding: .7em 3em;
+    border-style: none;
+    border-radius: 1em;
+    cursor: pointer;
 }
