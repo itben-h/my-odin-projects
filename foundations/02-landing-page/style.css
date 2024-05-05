@@ -1,6 +1,6 @@
 :root {
     --primary: rgb(54, 82, 117);
-    --highlight: rgb(54, 186, 226);
+    --highlight: rgb(71, 149, 232);
     --offwhite: rgb(219, 219, 219);
 }
 
@@ -75,7 +75,7 @@ body {
     margin-top: 0.2em;
 }
 
-.body .title {
+.body > .title {
     text-align: center;
     padding: 2em;
 }
@@ -108,9 +108,13 @@ body {
 .quote {
     background-color: rgb(233, 233, 233);
     margin-top: 3em;
-    padding: 3em 20em;
+    padding: 3em 10em;
     font-size: 1.5em;
     font-style: italic;
+}
+
+.quote div {
+    min-width: 15em;
 }
 
 .bold.name {
@@ -119,8 +123,28 @@ body {
     text-align: right;
 }
 
+.call {
+    background-color: var(--highlight);
+    border-radius: 1em;
+    margin: 5em 12em;
+    padding: 2em 10%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.call .title {
+    margin-bottom: 0.5em;
+}
+
 #footer {
     background-color: rgb(27, 27, 50);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 0.5em 3em;
 }
 
 ul {
@@ -136,8 +160,10 @@ a {
     font-weight: bold;
     color: white;
     background-color: var(--highlight);
+    max-height: 3em;
     padding: .7em 3em;
-    border-style: none;
-    border-radius: 1em;
+    white-space: nowrap;
+    border: 0.1em solid white;
+    border-radius: 0.75em;
     cursor: pointer;
 }
