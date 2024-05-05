@@ -18,11 +18,17 @@ body {
 #header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     background-color: var(--primary);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 0 0 1em black;
+}
+
+#header div,
+#header ul {
+    padding: 0 2em;
 }
 
 .title {
@@ -52,6 +58,7 @@ body {
     border: 0.3em solid var(--highlight);
     border-radius: 1em;
     padding: 0 1em;
+    padding-top: 1em;
 }
 
 .icon {
@@ -60,8 +67,12 @@ body {
 
 .icon-set p{
     max-width: 10vw;
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: rgb(59, 59, 59);
+}
+
+#footer {
+    background-color: rgb(27, 27, 50);
 }
 
 ul {
