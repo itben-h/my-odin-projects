@@ -1,5 +1,6 @@
 :root {
     --primary: rgb(54, 82, 117);
+    --highlight: rgb(54, 186, 226);
 }
 
 body {
@@ -37,6 +38,30 @@ body {
 .intro {
     background-color: var(--primary);
     padding: 3em 6em;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.icon-set {
+    text-align: center;
+    border: 0.3em solid var(--highlight);
+    border-radius: 1em;
+    padding: 0 1em;
+}
+
+.icon {
+    height: 4em;
+}
+
+.icon-set p{
+    max-width: 10vw;
+    font-size: 0.8em;
+    color: rgb(59, 59, 59);
 }
 
 ul {
