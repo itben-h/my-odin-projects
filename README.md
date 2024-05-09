@@ -6,3 +6,4 @@ Personal work done under [**The Odin Project**](https://www.theodinproject.com/)
 | --- | --- | :---: | :---: |
 | **Recipes Pages** | CLI Basics, Git Basics, HTML Basics | [Code](https://github.com/itben-h/my-odin-projects/tree/main/foundations/01-recipes-pages) | [Link](https://itben-h.github.io/my-odin-projects/foundations/01-recipes-pages/)
 | **Landing Page** | CSS Basics, Flexbox | [Code](https://github.com/itben-h/my-odin-projects/tree/main/foundations/02-landing-page) | [Link](https://itben-h.github.io/my-odin-projects/foundations/02-landing-page/)
+| **Rock Paper Scissors** | Javascript Basics | [Code](https://github.com/itben-h/my-odin-projects/tree/main/foundations/03-rock-paper-scissors) | [Link](https://itben-h.github.io/my-odin-projects/foundations/03-rock-paper-scissors/)
