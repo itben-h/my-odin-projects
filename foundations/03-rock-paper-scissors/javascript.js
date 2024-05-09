@@ -41,7 +41,7 @@ function playGame() {
 
         humanChoice = capitalize(humanChoice);
         computerChoice = capitalize(computerChoice);
-        let msg = "You " + res + " ! " ;
+        let msg = "You " + res + "! " ;
         if (res == "win") {
             humanScore += 1;
             msg = msg + humanChoice + " beats " + computerChoice + "!";
