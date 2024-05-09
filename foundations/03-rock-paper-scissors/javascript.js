@@ -44,14 +44,14 @@ function playGame() {
         let msg = "You " + res + " ! " ;
         if (res == "win") {
             humanScore += 1;
-            msg = msg + humanChoice + " beats " + computerChoice + " !";
+            msg = msg + humanChoice + " beats " + computerChoice + "!";
         }
         else if (res == "lose") {
             computerScore += 1;
-            msg = msg + computerChoice + " beats " + humanChoice + " !";
+            msg = msg + computerChoice + " beats " + humanChoice + "!";
         }
         else 
-            msg = msg + "Both players played " + computerChoice + " !";
+            msg = msg + "Both players played " + computerChoice + "!";
         console.log(msg);
     }
     for (let i = 0; i < 5; i++) {
