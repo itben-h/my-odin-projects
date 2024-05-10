@@ -1,4 +1,12 @@
-#id {
+body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
+}
+
+#container {
     display: flex;
     flex-direction: column;
 }
