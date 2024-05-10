@@ -2,18 +2,22 @@ const container = document.querySelector('#container');
 const rowMaster = document.createElement('div');
 const sqMaster = document.createElement('div');
 
+let length = container.clientWidth;
+let divisor = 16;
+length = length / divisor;
+
 rowMaster.style.display = 'flex';
 rowMaster.style.justifyContent = 'center';
 sqMaster.classList.add('sq');
-sqMaster.style.cssText = 'height: 2em; width: 2em; border-style: solid';
+sqMaster.style.cssText = `height: ${length}px; width: ${length}px`;
 
 container.appendChild(rowMaster);
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < divisor; i++) {
     let sq = sqMaster.cloneNode();
     rowMaster.appendChild(sq);
 }
 
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < divisor - 1; i++) {
     let row = rowMaster.cloneNode(true);
     container.appendChild(row);
 }
