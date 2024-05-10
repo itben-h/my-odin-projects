@@ -1,3 +1,11 @@
+const container = document.querySelector("#container");
+const results = document.createElement("div");
+container.appendChild(results);
+
+function capitalize(word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+}
+
 function getComputerChoice() {
     let num = Math.floor(Math.random() * 3);
     if (num == 0)
@@ -8,58 +16,63 @@ function getComputerChoice() {
         return ("scissors");
 }
 
-function getHumanChoice() {
-    return (prompt("Choose rock, paper or scissors"));
-}
+let humanScore = 0;
+let computerScore = 0;
 
-function capitalize(word) {
-    return (word.charAt(0).toUpperCase() + word.slice(1));
-}
-
-function playGame() {
-    let humanScore = 0;
-    let computerScore = 0;
-
-    function playRound(humanChoice, computerChoice) {
-        let res = "lose";
-        
-        humanChoice = humanChoice.toLowerCase();
-        if (humanChoice == computerChoice)
-            res = "tied";
-        else {
-            if (humanChoice == "rock") {
-                if (computerChoice == "scissors")
-                    res = "win"
-            }
-            else if (humanChoice == "paper") {
-                if (computerChoice == "rock")
-                    res = "win"
-            }
-            else if (computerChoice == "paper")
+function playRound(humanChoice) {
+    let computerChoice = getComputerChoice();
+    let res = "lose";
+    
+    if (humanChoice == computerChoice)
+        res = "tied";
+    else {
+        if (humanChoice == "rock") {
+            if (computerChoice == "scissors")
                 res = "win"
         }
+        else if (humanChoice == "paper") {
+            if (computerChoice == "rock")
+                res = "win"
+        }
+        else if (computerChoice == "paper")
+            res = "win"
+    }
 
-        humanChoice = capitalize(humanChoice);
-        computerChoice = capitalize(computerChoice);
-        let msg = "You " + res + "! " ;
-        if (res == "win") {
-            humanScore += 1;
-            msg = msg + humanChoice + " beats " + computerChoice + "!";
-        }
-        else if (res == "lose") {
-            computerScore += 1;
-            msg = msg + computerChoice + " beats " + humanChoice + "!";
-        }
-        else 
-            msg = msg + "Both players played " + computerChoice + "!";
-        console.log(msg);
+    humanChoice = capitalize(humanChoice);
+    computerChoice = capitalize(computerChoice);
+    let msg = "You " + res + "! " ;
+    if (res == "win") {
+        humanScore += 1;
+        msg += humanChoice + " beats " + computerChoice + "!";
     }
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
+    else if (res == "lose") {
+        computerScore += 1;
+        msg += computerChoice + " beats " + humanChoice + "!";
     }
-    console.log("Game End! You: " + humanScore + " Computer: " + computerScore)
+    else 
+        msg += "Both players played " + computerChoice + "!";
+
+    msg += " Current Score - You: " + humanScore + " Computer: " + computerScore;
+    if (humanScore == 5)
+        msg += " Game End! You Win!"
+    if (computerScore == 5)
+        msg += " Game End! Computer Wins!"
+    results.textContent = (msg);
 }
 
-playGame();
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", (choice) =>{
+        switch((choice.target).id) {
+            case "rock":
+                playRound("rock");
+                break;
+            case "paper":
+                playRound("paper");
+                break;
+            case "scissors":
+                playRound("scissors");
+                break;
+        }
+    })
+})
