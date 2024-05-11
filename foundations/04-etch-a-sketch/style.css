@@ -1,16 +1,29 @@
 :root {
     --grid-size: 30em;
+    --font-size: 1.2em;
 }
 
 body {
     font-family: Roboto, sans-serif;
-    font-size: 1.2em;
+    font-size: var(--font-size);
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--font-size);
+}
+
+#update {
+    text-align: center;
+    margin: 2em;
+    height: var(--font-size);
 }
 
 #container {
     width: var(--grid-size);
     height: var(--grid-size);
-    background-color: pink;
-    margin: 5em auto 0 auto;
+    background-color: rgb(211, 211, 211);
+    margin: 0 auto;
     border: 3px solid black;
 }
